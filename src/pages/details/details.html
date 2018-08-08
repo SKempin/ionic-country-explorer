@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar transparent>
+    <ion-title>{{country.name}}</ion-title>
+    <ion-buttons end>
+      <button (click)="regularShare(country.name)" ion-button icon-only>
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+
+
+  <h1>{{country.name}}</h1>
+  <img src="{{country.flag}}">
+  <p>Capital: {{country.capital}}</p>
+  <p>Region: {{country.region}}</p>
+  <p>Population: {{country.population | numeralPipe:'0,0' }}</p>
+  <p>Area: {{country.area}}</p>
+  <p>Coordinates (lat / long): {{country.latlng}}</p>
+  <p>{{country.languages.name}}</p>
+  <p>{{country.languages.symbol}}</p>
+  <p>{{country.currencies.name}}</p>
+  <p>{{country.currencies.symbol}}</p>
+
+
+
+
+<div *ngIf="photo" class="photo-container">
+ <hr>
+
+<h4>Images from Unsplash</h4>
+    <img src="{{image}}">
+    <p>{{photo?.description}}</p>
+    <p>{{photo?.location?.title}}</p>
+    <p>Photo by {{photo?.user?.name}}</p>
+    <img src="{{photo?.user?.profile_image?.medium}}">
+    <p>Latitude: {{photo?.location?.position.latitude}}</p>
+    <p>Longitude: {{photo?.location?.position.longitude}}</p>
+    <button *ngIf="photo.user.instagram_username" ion-button icon-left (click)="openURL('https://www.instagram.com/'+photo?.user?.instagram_username, 'Instagram Link')">
+      <ion-icon name="logo-instagram"></ion-icon>/{{photo?.user?.instagram_username}}
+    </button>
+    <p>Total views: {{photo?.views}}</p>
+    <!-- https://forum.ionicframework.com/t/scrolling-event-in-ion-content/55563 -->
+    <p>Colour: {{photo?.color}}</p>
+  </div>
+
+
+  <hr>
+
+  <!-- <div *ngIf="weather"> -->
+  <h4>Weather</h4>
+  <p>{{weather?.name}}</p>
+  <p>Current temp: {{weather?.main.temp}} &deg;C</p>
+  <p>Min temp: {{weather?.main.temp_min}} &deg;C</p>
+  <p>Max temp: {{weather?.main.temp_max}} &deg;C</p>
+
+  <p>Current humidity: {{weather?.main.humidity}}%</p>
+  <p>Current pressure: {{weather?.main.pressure}} hPa</p>
+
+
+  <!-- </div> -->
+
+  <canvas #barCanvas></canvas>
+
+  <!-- chartsJS of weather-->
+
+  <hr>
+  <div *ngIf="articlesWithImages && articlesWithImages.length > 0">
+    <h4>News headlines in {{country.name}}</h4>
+
+    <ion-card *ngFor="let item of articlesWithImages" (click)="openURL(item.url, 'Open article')">
+      <ion-item>
+        <h2>{{item.title}}</h2>
+      </ion-item>
+      <img src="{{item.urlToImage}}">
+      <ion-card-content>
+        <p>{{item.description}}</p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <p>{{item.source.name}}</p>
+        </ion-col>
+        <ion-col align-self-center text-center>
+          <ion-note>
+            {{item.publishedAt | momentjsPipe: 'MMMM Do YYYY, h:mma'}}
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+
+  </div>
+  <hr>
+
+</ion-content>

@@ -1,0 +1,17 @@
+// page-details {
+// Header
+.circle-pic {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: auto;
+  border: solid 6px rgba(255, 255, 255, 0.3);
+}
+
+// Map
+#map {
+  height: 100%;
+}

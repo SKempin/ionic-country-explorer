@@ -1,0 +1,7 @@
+{
+  "name": "Country_Explorer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

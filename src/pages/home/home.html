@@ -1,0 +1,93 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-bottom transparent>
+    <ion-segment [(ngModel)]="segment" color="white">
+      <ion-segment-button value="All">All</ion-segment-button>
+      <ion-segment-button value="Africa">Africa</ion-segment-button>
+      <ion-segment-button value="Americas">Americas</ion-segment-button>
+      <ion-segment-button value="Asia">Asia</ion-segment-button>
+      <ion-segment-button value="Europe">Europe</ion-segment-button>
+      <ion-segment-button value="Oceania">Oceania</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col col-12>
+
+
+        <div [ngSwitch]="segment">
+
+          <ion-list *ngSwitchCase="'All'" detail-push>
+            <ion-item *ngFor="let country of countries" (click)="goToDetail(country)">
+              <ion-avatar item-start>
+                <img src="{{country.flag}}">
+              </ion-avatar>
+              <h2>{{country.name}}</h2>
+            </ion-item>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'Africa'" detail-push>
+            <ion-item *ngFor="let country of countries | stringFilter:{region:'Africa'}" (click)="goToDetail(country)">
+              <ion-avatar item-start>
+                <img src="{{country.flag}}">
+              </ion-avatar>
+              <h2>{{country.name}}</h2>
+            </ion-item>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'Americas'" detail-push>
+            <ion-item *ngFor="let country of countries | stringFilter:{region:'Americas'}" (click)="goToDetail(country)">
+              <ion-avatar item-start>
+                <img src="{{country.flag}}">
+              </ion-avatar>
+              <h2>{{country.name}}</h2>
+            </ion-item>
+          </ion-list>
+
+
+          <ion-list *ngSwitchCase="'Asia'" detail-push>
+            <ion-item *ngFor="let country of countries | stringFilter:{region:'Asia'}" (click)="goToDetail(country)">
+              <ion-avatar item-start>
+                <img src="{{country.flag}}">
+              </ion-avatar>
+              <h2>{{country.name}}</h2>
+            </ion-item>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'Europe'" detail-push>
+            <ion-item *ngFor="let country of countries | stringFilter:{region:'Europe'}" (click)="goToDetail(country)">
+              <ion-avatar item-start>
+                <img src="{{country.flag}}">
+              </ion-avatar>
+              <h2>{{country.name}}</h2>
+            </ion-item>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'Oceania'" detail-push>
+            <ion-item *ngFor="let country of countries | stringFilter:{region:'Oceania'}" (click)="goToDetail(country)">
+              <ion-avatar item-start>
+                <img src="{{country.flag}}">
+              </ion-avatar>
+              <h2>{{country.name}}</h2>
+            </ion-item>
+          </ion-list>
+
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

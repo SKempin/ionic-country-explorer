@@ -1,0 +1,58 @@
+page-about {
+  .toolbar-title,
+  .bar-button {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  ion-content {
+    @include linear-gradient(top, $skyline);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  .circle-pic {
+    margin-top: 20px;
+  }
+  .title {
+    color: white;
+    padding-top: 10px;
+  }
+  .developer {
+    color: white;
+    font-size: 2em;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .meta {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+    padding: 2px 0 10px;
+    margin: 0 auto 20px;
+    display: block;
+    width: 100%;
+    > .icon {
+      display: block;
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+    > span {
+      display: block;
+      padding-top: 8px;
+      font-size: 1.7em;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    &.transparent {
+      background: none;
+      border: none;
+    }
+  }
+}

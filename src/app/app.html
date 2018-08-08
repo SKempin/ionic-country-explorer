@@ -1,0 +1,42 @@
+<ion-menu [content]="content" color="danger">
+  <ion-header>
+    <ion-toolbar transparent>
+      <ion-title>Country Explorer</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+      <button menuClose ion-item icon-left (click)="openURL('https://www.stephenkempin.co.uk', 'Portfolio Website')">
+        <ion-icon name="person"></ion-icon>Portfolio Site
+      </button>
+    </ion-list>
+
+
+
+    <p>Developed By:</p>
+    <p>{{ userData?.name }}</p>
+
+    <img src="{{userData?.avatar_url}}" class="circle-pic">
+
+    <button ion-button icon-left (click)="openURL(userData?.html_url, 'Github Link')">
+      <ion-icon name="logo-github"></ion-icon>/{{userData?.login}}
+    </button>
+
+    <hr>
+
+    <ion-icon name="logo-android"></ion-icon>
+    View more SK-UK apps:
+    <button color="dark" ion-button icon-left (click)="openURL('https://play.google.com/store/apps/developer?id=SK+-+UK', 'Github Link')">
+      <ion-icon name="logo-android"></ion-icon>Google Play
+    </button>
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

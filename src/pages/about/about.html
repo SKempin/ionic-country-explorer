@@ -1,0 +1,67 @@
+<ion-header no-border>
+
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>About</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- Avatar -->
+  <img src="{{userData?.avatar_url}}" class="circle-pic">
+  <!-- Full Name -->
+  <p class="title">Developed by:</p>
+  <span class="developer">{{ userData?.name }}</span>
+
+  <!--  Github link -->
+  <span class="meta">
+    <ion-icon name="logo-github"></ion-icon>
+    Github:
+    <button ion-button icon-left (click)="openURL(userData?.html_url, 'Github Link')">
+      <ion-icon name="logo-github"></ion-icon>/{{userData?.login}}
+    </button>
+  </span>
+
+  <!-- Github user location -->
+  <span class="meta">
+    <ion-icon name="compass"></ion-icon>
+    Location:
+    <span>{{ userData?.location }}</span>
+  </span>
+
+  <!-- Github followers count -->
+  <span class="meta">
+    <ion-icon name="people"></ion-icon>
+    Github Followers:
+    <span>{{ userData?.followers }}</span>
+  </span>
+
+  <!-- Github last updated count -->
+  <span class="meta">
+    <ion-icon name="time"></ion-icon>
+    Github Last Updated:
+    <span>{{ userData?.updated_at | momentjsPipe: 'MMM Do YYYY' }}</span>
+  </span>
+
+  <!-- Github repos count -->
+  <span class="meta">
+    <ion-icon name="code"></ion-icon>
+    Github Public Repos:
+    <span>{{ userData?.public_repos }}</span>
+  </span>
+
+  <!-- Github repos count -->
+  <span class="meta transparent">
+    <ion-icon name="logo-android"></ion-icon>
+    View more SK-UK apps:
+    <button color="dark" ion-button icon-left (click)="openURL('https://play.google.com/store/apps/developer?id=SK+-+UK', 'Github Link')">
+      <ion-icon name="logo-android"></ion-icon>Google Play
+    </button>
+  </span>
+
+
+</ion-content>

@@ -90,4 +90,4 @@ View my commercial apps on the [SK-UK Google Play Store](https://play.google.com
 
 ## License
 
-[MIT](https://github.com/SKempin/reactjs-tmdb-app/blob/master/LICENCE)
+[MIT](https://github.com/SKempin/ionic-country-explorer/blob/master/LICENCE)

@@ -1,6 +1,6 @@
 # Country Explorer Ionic Native App
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/SKempin/ionic-country-explorer/blob/master/LICENCE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/SKempin/ionic-country-explorer/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/SKempin/ionic-country-explorer.svg?style=flat-square)](https://github.com/SKempin/ionic-country-explorer/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/SKempin/ionic-country-explorer.svg?style=flat-square)](https://github.com/SKempin/ionic-country-explorer/network)
 
@@ -90,4 +90,4 @@ View my commercial apps on the [SK-UK Google Play Store](https://play.google.com
 
 ## License
 
-[MIT](https://github.com/SKempin/ionic-country-explorer/blob/master/LICENCE)
+[MIT](https://github.com/SKempin/ionic-country-explorer/blob/master/LICENSE)

@@ -10,7 +10,7 @@ An [Ionic](https://ionicframework.com/) native app utilising multiple public JSO
 
 ## Android APK
 
-[Android APK - Coming soon)](TBC)
+_Coming soon_
 
 ## App Preview
 

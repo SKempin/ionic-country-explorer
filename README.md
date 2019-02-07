@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/SKempin/ionic-country-explorer/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/SKempin/ionic-country-explorer.svg?style=flat-square)](https://github.com/SKempin/ionic-country-explorer/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/SKempin/ionic-country-explorer.svg?style=flat-square)](https://github.com/SKempin/ionic-country-explorer/network)
+[![Mentioned in Awesome Ionic](https://awesome.re/mentioned-badge.svg)](https://github.com/candelibas/awesome-ionic)
 
 An [Ionic](https://ionicframework.com/) native app utilising multiple public JSON API’s and JS libraries, such as [Chart.js](https://www.chartjs.org/) and [Moment.js](https://momentjs.com/). Built as a personal training project for [Ionic](https://ionicframework.com/) and [Angular](https://angular.io/) frameworks.
 
